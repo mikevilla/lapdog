@@ -1,0 +1,34 @@
+a {
+  color: #ff6347;
+}
+.btn-primary {
+  background-color: #ff6347;
+  border-color: #ff6347;
+}
+.preloader .status {
+  color: #113870;
+}
+.main-nav .navbar-toggle i {
+  color: #ff6347;
+}
+.main-nav .navbar-nav > li.current a {
+  color: #ff6347;
+}
+.landing-page .features-blocks .feature-block .feature-block-media i {
+  color: #ff6347;
+}
+.landing-page .feature-media .feature-media-text .btn.watch-video:hover {
+  color: #ff6347;
+}
+.landing-page .features-overview .feature i {
+  color: #ff6347;
+}
+.landing-page .the-authors .author .social a:hover {
+  color: #ff6347;
+}
+.landing-page .the-authors .author .job {
+  color: #ff6347;
+}
+.landing-page .address .social a:hover {
+  color: #ff6347;
+}
