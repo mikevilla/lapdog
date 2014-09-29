@@ -164,11 +164,22 @@ img {
 }
 
 
-#map, #petition {
+#map, #petition, #contact {
 	background: #e5e5e5 !important;
 }
 
 
+#whatis{
+	font-size: 18px !important;
+}
+
+.asterisk{
+font-size:12px !important;
+}
+
+#map h2{
+color:#113870 !important;
+}
 
 /* ====================================================
 	 PRE LOADER
@@ -328,7 +339,7 @@ footer {
   text-align: center;
 }
 .intro.has-bg-image {
-  background-image: url(../images/8685939424_7096a8d5a2_o.jpg);
+  background-image: url(../images/5873374114_b50078af6f_o.jpg);
 }
 .intro .intro-logo {
   padding-top: 100px;
