@@ -227,10 +227,23 @@ var lapDogMap = new Datamap({
       datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
           alert(geography.properties.name);
 
+          console.log("IN state click 2");
+
+          $.lapdog.state_data(function (data) {
+            //$("#recently_joined").html("recently_joined_layout", {current_person_id:me.options.main_details.current_person_id, friends_list:data});
+
+            console.log("IN $.lapdog");
+            console.log(data);
+          }, null);
+
           var data = {state: geography.properties.name};
 
           $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {test_data: data}));
           $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template', {test_data: data}));
+
+
+
+
 
 
       });
