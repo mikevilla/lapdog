@@ -226,6 +226,13 @@ var lapDogMap = new Datamap({
   done: function(datamap) {
       datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
           alert(geography.properties.name);
+
+          var data = {state: geography.properties.name};
+
+          $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {test_data: data}));
+          $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template', {test_data: data}));
+
+
       });
   }
 

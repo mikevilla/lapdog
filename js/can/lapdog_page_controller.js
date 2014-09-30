@@ -1,15 +1,17 @@
 var lapdogPageControl  = can.Control(
 {
   defaults:{
-    test_structure:null
+
   }
 },
 // @Prototype
 {
   init:function () {
-    this.load();
-              var self = this;
-              console.log('lapdog control')
+    console.log('in INIT');
+    console.log('test_data: ',test_data);
+    this.load(test_data);
+    var self = this;
+    console.log('lapdog control')
 
   },
 
@@ -25,6 +27,9 @@ var lapdogPageControl  = can.Control(
 
     }
   }
+
+
+
 
 
 });
