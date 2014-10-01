@@ -947,3 +947,14 @@ footer .copyright {
     z-index: 1;
     top: -4px;
 }
+
+#house_container_layout {
+    padding-top: 45px;
+    clear: both;
+}
+
+
+.senator-column {
+    margin: 0 auto;
+    margin-top: 35px;
+}
