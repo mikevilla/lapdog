@@ -834,9 +834,14 @@ footer .copyright {
 
 /* LAPDOG ScoreCard */
 
+.senator-score-card .senator-info {
+    width: 300px;
+    height: 196px;
+}
+
 .senator-score-card {
     width: 300px;
-    height: 294px;
+    height: 280px;
     background-color: #F6F6F6;
 }
 
@@ -845,16 +850,34 @@ footer .copyright {
     width: auto;
 }
 
-.senator-score-card .rating-values .thumbs,
-.senator-score-card .rating-values .dollar {
+.senator-score-card .rating-values .thumbs-container,
+.senator-score-card .rating-values .dollar-container {
     display: inline-block ;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+    width: 150px;
+    height: 48px;
+    float: left;
 }
 
 .senator-score-card .rating-labels .brady-rating,
 .senator-score-card .rating-labels .gun-lobby {
-    display: inline-block ;
+    float: left;
+    width: 50%;
+    font-family: sans-serif;
+    color: #696969;
+    font-size: 1.05em;
+    margin-top: 12px;
 }
 
 .senator-score-card .rating-values {
     background-color: #F3F3F5;
+    width: 300px;
+    height: 48px;
+}
+
+.senator-score-card .rating-labels {
+    background-color: #F6F6F6;
+    width: 300px;
+    height: 42px;
+    text-align: center;
 }
