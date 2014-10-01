@@ -1,6 +1,13 @@
-<div>Senator TEST - 2 senators per state
 
-  NEW Senator: <%= test_data.senator %>
+<div>=====================  SENATORS  ======================= </div>
 
+
+
+<div>
+  <% for (var i=0; i<display_senators.length; i++) {%>
+    <%= display_senators[i].first %> <br/>
+
+    <div><img height="25px" alt="state" src="http://theunitedstates.io/images/congress/225x275/<%= display_senators[i].bioguide %>.jpg"></div>
+
+    <%}%>
 </div>
-

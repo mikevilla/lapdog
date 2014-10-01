@@ -225,29 +225,30 @@ var lapDogMap = new Datamap({
 
   done: function(datamap) {
       datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-          alert(geography.properties.name);
-
-          console.log("mike IN click 5");
 
           $.lapdog.state_data(function (data) {
 
             var state_data = data,
-                state = geography.properties.name;
-
-            console.log("state_data", state_data);
-            console.log("state", state);
+                state = geography.properties.name,
+                list_senators = [],
+                list_reps = [];
 
             $.each(state_data, function( index, value ) {
 
+              // find the desired state and determine with its senator or house rep
               if (state_data[index].state == state) {
-                console.log(state_data[index].first);
+                if (state_data[index].type == "") {
+                  list_senators.push(value);
+                } else {
+                  list_reps.push(value);
+                }
               }
 
             });
 
 
-            $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {state_data: state_data, state: state}));
-            $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template',{state_data: state_data, state: state}));
+            $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {display_senators: list_senators, state: state}));
+            $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template',{display_reps: list_reps, state: state}));
 
           }, null);
 
