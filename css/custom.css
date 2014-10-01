@@ -872,7 +872,10 @@ footer .copyright {
 .senator-score-card .senator-image {
     height: 130px;
     width: auto;
-    margin: 12px auto 0;
+    margin: 12px auto 16px;
+    -ms-transform: rotate(9deg); /* IE  */
+    -webkit-transform: rotate(9deg); /* Chrome, Safari, Opera */
+    transform: rotate(9deg);
 }
 
 .senator-score-card .rating-values .thumbs-container,
@@ -927,4 +930,20 @@ footer .copyright {
 
 .senator-score-card .dollar-amount .empty {
     color: #C0C0C2;
+}
+
+.senator-portrait {
+    height: 133px;
+}
+
+.senator-image-container {
+    position: relative;
+    top: -68px;
+}
+
+.paperclip-container {
+    position: relative;
+    left: 169px;
+    z-index: 1;
+    top: -4px;
 }
