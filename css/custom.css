@@ -839,11 +839,20 @@ footer .copyright {
     height: 196px;
 }
 
-.senator-position {
+.senator-score-card .senator-position {
     text-align: center;
+    font-family: helvetica neue;
+    font-size: 1.35em;
+    color: #696969;
 }
 
-.senator-name {
+.senator-score-card .senator-state {
+    font-weight: 400;
+    color: #383636;
+}
+
+.senator-score-card .senator-name {
+    margin-top: 11px;
     font-style: italic;
     color: #367EC1;
     font-size: 26px;
@@ -851,6 +860,7 @@ footer .copyright {
     font-weight: 400;
     letter-spacing: -2px;
     text-align: center;
+    line-height: 23px;
 }
 
 .senator-score-card {
@@ -859,9 +869,10 @@ footer .copyright {
     background-color: #F6F6F6;
 }
 
-.senator-image {
+.senator-score-card .senator-image {
     height: 130px;
     width: auto;
+    margin: 12px auto 0;
 }
 
 .senator-score-card .rating-values .thumbs-container,
@@ -898,4 +909,22 @@ footer .copyright {
 
 .senator-score-card .thumbs-image {
     margin: 12px auto 0;
+}
+
+.senator-score-card .dollar-amount {
+    padding: 5px;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.senator-score-card .dollar-amount .fill {
+    color: #367EC1;
+}
+
+.senator-score-card .dollar-amount .empty {
+    color: #C0C0C2;
 }
