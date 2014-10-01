@@ -839,6 +839,20 @@ footer .copyright {
     height: 196px;
 }
 
+.senator-position {
+    text-align: center;
+}
+
+.senator-name {
+    font-style: italic;
+    color: #367EC1;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: -2px;
+    text-align: center;
+}
+
 .senator-score-card {
     width: 300px;
     height: 280px;
@@ -880,4 +894,8 @@ footer .copyright {
     width: 300px;
     height: 42px;
     text-align: center;
+}
+
+.senator-score-card .thumbs-image {
+    margin: 12px auto 0;
 }
