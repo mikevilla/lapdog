@@ -7,8 +7,6 @@ var lapdogPageControl  = can.Control(
 // @Prototype
 {
   init:function () {
-    console.log('in INIT');
-    console.log('test_data: ',test_data);
     this.load(test_data);
     var self = this;
     console.log('lapdog control')
