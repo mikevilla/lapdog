@@ -246,9 +246,7 @@ var lapDogMap = new Datamap({
 
         });
 
-        console.log("list_senators", list_senators);
-
-
+        // display the the senator and house of reps data
         $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {display_senators: list_senators, state: state}));
         $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template',{display_reps: list_reps, state: state}));
 

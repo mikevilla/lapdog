@@ -873,9 +873,9 @@ footer .copyright {
     height: 130px;
     width: auto;
     margin: 12px auto 16px;
-    -ms-transform: rotate(9deg); /* IE  */
-    -webkit-transform: rotate(9deg); /* Chrome, Safari, Opera */
-    transform: rotate(9deg);
+    -ms-transform: rotate(7deg); /* IE  */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
 }
 
 .senator-score-card .rating-values .thumbs-container,

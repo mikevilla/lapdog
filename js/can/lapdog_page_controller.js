@@ -9,7 +9,7 @@ var lapdogPageControl  = can.Control(
   init:function () {
     this.load(test_data);
     var self = this;
-    console.log('lapdog control')
+    $.lapdog.initial_state = "California";
 
   },
 
@@ -32,9 +32,6 @@ var lapdogPageControl  = can.Control(
         };
 
 
-        var list_senators = [],
-            list_reps = [];
-
         // build the hash of states
         $.each($.lapdog_data, function( index, value ) {
 
@@ -49,16 +46,33 @@ var lapdogPageControl  = can.Control(
           $.state_data.states[value.state].push(value);
         });
 
+
+        // setup variables for state records and state names
+        var state_data = $.state_data.states[$.lapdog.initial_state],
+            state = "California",
+            list_senators = [],
+            list_reps = [];
+
+        $.each(state_data, function( index, value ) {
+
+          // find the desired state and determine with its senator or house rep
+          if (state_data[index].state == state) {
+            if (state_data[index].type == "") {
+              list_senators.push(value);
+            } else {
+              list_reps.push(value);
+            }
+          }
+
+        });
+
+        // display the the senator and house of reps data
+        $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {display_senators: list_senators, state: state}));
+        $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template',{display_reps: list_reps, state: state}));
+
       }, null);
 
-
-
-
-      /// original display each template here:
       this.set_up_complete = true;
-      $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {test_data:test_data}));
-      $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template', {test_data:test_data}));
-
     }
   },
 
