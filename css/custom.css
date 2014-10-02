@@ -279,7 +279,7 @@ color:#113870 !important;
 header,
 section,
 footer {
-  background: #fff;
+
 }
 /* ----------------------------------------
 	 Landing Page Defaults
@@ -955,8 +955,6 @@ footer .copyright {
 
 
 /* =========== House of Rep ================*/
-
-
 .rep-score-card {
     width: 226px;
     height: 185px;
