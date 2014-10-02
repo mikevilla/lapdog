@@ -959,13 +959,13 @@ footer .copyright {
 
 .rep-score-card {
     width: 226px;
-    height: 145px;
+    height: 185px;
     background-color: #F6F6F6;
 }
 
 .rep-score-card .rep-info {
     width: 226px;
-    height: 73px;
+    height: 115px;
 }
 
 .rep-score-card .rep-state {
@@ -1030,9 +1030,12 @@ footer .copyright {
 }
 
 .rep-score-card .rep-image {
-    height: 50px;
+    height: 58px;
     width: auto;
     margin: 12px auto 16px;
+    -ms-transform: rotate(4deg); /* IE  */
+    -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+    transform: rotate(4deg);
 }
 
 
@@ -1059,13 +1062,22 @@ footer .copyright {
 
 
 .rep-portrait {
-    height: 76px;
+    height: 118px;
 }
 
 .rep-image-container {
     position: relative;
-    top: -34px;
+    top: -41px;
 }
 
+img.house-paperclip-image {
+    height: 29px;
+}
 
+.house-paperclip-container {
+    position: relative;
+    left: 124px;
+    z-index: 1;
+    top: -3px;
+}
 
