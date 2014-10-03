@@ -22,7 +22,13 @@
                               <img class="rep-image" alt="senator" src="http://theunitedstates.io/images/congress/225x275/<%= display_reps[i].bioguide %>.jpg" />
                           </div>
                       </div>
-                      <div class="rep-name"><%= display_reps[i].first %> <%= display_reps[i].last %></div>
+                      <% var fullName = display_reps[i].first + " " + display_reps[i].last,
+                             lastname = display_reps[i].last;
+
+                         if (lastname.length > 16) {
+                           fullName = display_reps[i].last;
+                         } %>
+                      <div class="rep-name"><%if (fullName.length > 17) {%><%= display_reps[i].first[0] %>. <%= display_reps[i].last %><%} else {%><%= fullName %><%}%></div>
                       <div class="rep-position"><%
                         switch(display_reps[i].party) {
                             case "R":
