@@ -286,7 +286,6 @@ footer {
 ---------------------------------------- */
 .section-header {
   text-align: center;
-  max-width: 500px;
   margin: 0 auto 80px;
 }
 .title {
@@ -943,8 +942,8 @@ footer .copyright {
 }
 
 #house_container_layout {
-    padding-top: 45px;
     clear: both;
+    padding: 55px;
 }
 
 
@@ -1079,3 +1078,39 @@ img.house-paperclip-image {
     top: -3px;
 }
 
+/* Layout Customization */
+
+#house-rep-grid .features-overview .feature {
+    margin-bottom: 30px;
+}
+
+
+
+
+@media (min-width: 992px) {
+    #house_container_layout {
+       margin-left: -10%;
+    }
+}
+
+@media (min-width: 768px) {
+    #house_container_layout {
+       margin-left: -6%;
+    }
+}
+
+@media (max-width: 767px) {
+    .rep-score-card {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 636px) {
+    .senator-column {
+        float: none !important;
+    }
+
+    .senator-score-card {
+        margin: 0 auto;
+    }
+}

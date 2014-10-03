@@ -1,69 +1,16 @@
 
-<div>
-  <h1 style="text-align: center;"><%= state %>'s House Of Representatives Scores</h1>
-</div>
-
-
-<div>
-
-  <% for (var i=0; i<display_reps.length; i++) {%>
-    <%= display_reps[i].first %> <br/>
-
-   <div><img height="25px" alt="state" src="http://theunitedstates.io/images/congress/225x275/<%= display_reps[i].bioguide %>.jpg"></div>
-
-  <%}%>
-
-
-
-  <section id="house-rep-grid" class="features-overview section-padding">
+  <div id="house-rep-grid" class="features-overview">
     <div class="container">
-      <div class="section-header">
-          <div>
-            <h1 style="text-align: center;">California's House Of Representatives Scores</h1>
-          </div>
+      <div style="margin-bottom: 43px">
+        <div>
+          <h1 style="text-align: center;"><%= state %>'s House Of Representatives Scores</h1>
+        </div>
       </div>
 
 
-      <div class="row">
-        <div class="col-md-3 col-sm-3">
-          <div class="feature">
+      <% for (var i=0; i<display_reps.length; i++) {%>
 
-              <div class="rep-score-card">
-                  <div class="rep-info">
-                      <div class="rep-portrait">
-                          <div class="house-paperclip-container">
-                              <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
-                          </div>
-                          <div class="rep-image-container">
-                              <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
-                          </div>
-                      </div>
-                      <div class="rep-name">Bill Nelson</div>
-                      <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
-                  </div>
-                   <div class="rating-values">
-                      <div class="thumbs-container">
-                        <img class="thumbs-image" alt="thumbs" src="images/thumbs_down.png" />
-                      </div>
-
-                      <div class="dollar-container">
-                          <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                      </div>
-                   </div>
-                   <div class="rating-labels">
-                     <div class="brady-rating">
-                       Brady Rating
-                     </div>
-                     <div class="gun-lobby">
-                       Gun Lobby
-                     </div>
-                   </div>
-             </div>
-
-
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3">
+        <div class="col-md-3 col-sm-6">
           <div class="feature">
               <div class="rep-score-card">
                   <div class="rep-info">
@@ -72,85 +19,11 @@
                               <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
                           </div>
                           <div class="rep-image-container">
-                              <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
+                              <img class="rep-image" alt="senator" src="http://theunitedstates.io/images/congress/225x275/<%= display_reps[i].bioguide %>.jpg" />
                           </div>
                       </div>
-                      <div class="rep-name">Bill Nelson</div>
-                      <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
-                  </div>
-                   <div class="rating-values">
-                      <div class="thumbs-container">
-                        <img class="thumbs-image" alt="thumbs" src="images/thumbs_down.png" />
-                      </div>
-
-                      <div class="dollar-container">
-                          <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                      </div>
-                   </div>
-                   <div class="rating-labels">
-                     <div class="brady-rating">
-                       Brady Rating
-                     </div>
-                     <div class="gun-lobby">
-                       Gun Lobby
-                     </div>
-                   </div>
-             </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-3">
-          <div class="feature">
-              <div class="rep-score-card">
-                  <div class="rep-info">
-                      <div class="rep-portrait">
-                          <div class="house-paperclip-container">
-                              <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
-                          </div>
-                          <div class="rep-image-container">
-                              <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
-                          </div>
-                      </div>
-                      <div class="rep-name">Bill Nelson</div>
-                      <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
-                  </div>
-                   <div class="rating-values">
-                      <div class="thumbs-container">
-                        <img class="thumbs-image" alt="thumbs" src="images/thumbs_down.png" />
-                      </div>
-
-                      <div class="dollar-container">
-                          <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                      </div>
-                   </div>
-                   <div class="rating-labels">
-                     <div class="brady-rating">
-                       Brady Rating
-                     </div>
-                     <div class="gun-lobby">
-                       Gun Lobby
-                     </div>
-                   </div>
-             </div>
-
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-3">
-          <div class="feature">
-              <div class="rep-score-card">
-                  <div class="rep-info">
-                      <div class="rep-portrait">
-                          <div class="house-paperclip-container">
-                              <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
-                          </div>
-                          <div class="rep-image-container">
-                              <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
-                          </div>
-                      </div>
-                      <div class="rep-name">Bill Nelson</div>
-                      <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
+                      <div class="rep-name"><%= display_reps[i].first %> <%= display_reps[i].last %></div>
+                      <div class="rep-position">Representative, <span class="rep-state"><%= display_reps[i].state %></span></div>
                   </div>
                    <div class="rating-values">
                       <div class="thumbs-container">
@@ -172,151 +45,11 @@
              </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-3 col-sm-3">
-        <div class="feature">
-            <div class="rep-score-card">
-                <div class="rep-info">
-                    <div class="rep-portrait">
-                        <div class="house-paperclip-container">
-                            <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
-                        </div>
-                        <div class="rep-image-container">
-                            <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
-                        </div>
-                    </div>
-                    <div class="rep-name">Bill Nelson</div>
-                    <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
-                </div>
-                 <div class="rating-values">
-                    <div class="thumbs-container">
-                      <img class="thumbs-image" alt="thumbs" src="images/thumbs_down.png" />
-                    </div>
+      <%}%>
 
-                    <div class="dollar-container">
-                        <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                    </div>
-                 </div>
-                 <div class="rating-labels">
-                   <div class="brady-rating">
-                     Brady Rating
-                   </div>
-                   <div class="gun-lobby">
-                     Gun Lobby
-                   </div>
-                 </div>
-           </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3">
-        <div class="feature">
-            <div class="rep-score-card">
-                <div class="rep-info">
-                    <div class="rep-portrait">
-                        <div class="house-paperclip-container">
-                            <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
-                        </div>
-                        <div class="rep-image-container">
-                            <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
-                        </div>
-                    </div>
-                    <div class="rep-name">Bill Nelson</div>
-                    <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
-                </div>
-                 <div class="rating-values">
-                    <div class="thumbs-container">
-                      <img class="thumbs-image" alt="thumbs" src="images/thumbs_down.png" />
-                    </div>
 
-                    <div class="dollar-container">
-                        <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                    </div>
-                 </div>
-                 <div class="rating-labels">
-                   <div class="brady-rating">
-                     Brady Rating
-                   </div>
-                   <div class="gun-lobby">
-                     Gun Lobby
-                   </div>
-                 </div>
-           </div>
-        </div>
-      </div>
 
-      <div class="col-md-3 col-sm-3">
-        <div class="feature">
-            <div class="rep-score-card">
-                <div class="rep-info">
-                    <div class="rep-portrait">
-                        <div class="house-paperclip-container">
-                            <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
-                        </div>
-                        <div class="rep-image-container">
-                            <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
-                        </div>
-                    </div>
-                    <div class="rep-name">Bill Nelson</div>
-                    <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
-                </div>
-                 <div class="rating-values">
-                    <div class="thumbs-container">
-                      <img class="thumbs-image" alt="thumbs" src="images/thumbs_down.png" />
-                    </div>
-
-                    <div class="dollar-container">
-                        <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                    </div>
-                 </div>
-                 <div class="rating-labels">
-                   <div class="brady-rating">
-                     Brady Rating
-                   </div>
-                   <div class="gun-lobby">
-                     Gun Lobby
-                   </div>
-                 </div>
-           </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-3">
-        <div class="feature">
-            <div class="rep-score-card">
-                <div class="rep-info">
-                    <div class="rep-portrait">
-                        <div class="house-paperclip-container">
-                            <img class="house-paperclip-image" alt="paperclip" src="images/paper_clip.png" />
-                        </div>
-                        <div class="rep-image-container">
-                            <img class="rep-image" alt="senator" src="images/testimonial-avatar-03.png" />
-                        </div>
-                    </div>
-                    <div class="rep-name">Bill Nelson</div>
-                    <div class="rep-position">Senior Senator, <span class="rep-state">New York</span></div>
-                </div>
-                 <div class="rating-values">
-                    <div class="thumbs-container">
-                      <img class="thumbs-image" alt="thumbs" src="images/thumbs_down.png" />
-                    </div>
-
-                    <div class="dollar-container">
-                        <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                    </div>
-                 </div>
-                 <div class="rating-labels">
-                   <div class="brady-rating">
-                     Brady Rating
-                   </div>
-                   <div class="gun-lobby">
-                     Gun Lobby
-                   </div>
-                 </div>
-           </div>
-        </div>
-      </div>
     </div>
-  </section>
+  </div>
 
-</div>
