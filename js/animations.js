@@ -59,7 +59,7 @@ $(document).ready(function() {
 							'-o-animation-delay' : (index * 0.3) + "s"
 						});
 				});
-				$('.feature').animo( { animation: 'fadeInLeft', duration: 0.7, keep: true } );
+				$('.feature').animo( { animation: 'fadeInLeft', duration: 0.3, keep: true } );
 			}, { offset: 200 });
 
 
