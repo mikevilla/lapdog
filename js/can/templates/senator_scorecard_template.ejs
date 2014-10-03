@@ -30,7 +30,7 @@
               </div>
                <div class="rating-values">
                   <div class="thumbs-container">
-                    <img class="thumbs-image" alt="thumbs" src="<% if (i % 2 == 0) {%>images/thumbs_down.png<%}else{%>images/thumbs_up.png<%}%>" />
+                    <img class="thumbs-image" alt="thumbs" src="<% if ((display_senators[i].voting_score == 0)) {%>images/thumbs_down.png<%}else{%>images/thumbs_up.png<%}%>" />
                   </div>
 
                     <div class="dollar-container">
