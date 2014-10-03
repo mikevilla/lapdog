@@ -823,7 +823,9 @@ footer .copyright {
 
 
 /* LAPDOG customizations */
-
+.lapdog_master_content_layout {
+    overflow-x: hidden;
+}
 
 /* LAPDOG ScoreCard */
 
