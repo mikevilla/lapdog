@@ -827,6 +827,10 @@ footer .copyright {
     overflow-x: hidden;
 }
 
+path:hover {
+    cursor: pointer;
+}
+
 /* LAPDOG ScoreCard */
 
 .senator-score-card .senator-info {

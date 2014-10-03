@@ -6,7 +6,7 @@ var lapDogMap = new Datamap({
    popupTemplate: function(geography, data) {
       //alert(data.electoralVotes);
       $("#state-name-value").html(data.state);
-      return '<div class="hoverinfo">' + geography.properties.name + 'Electoral Votes:' +  data.electoralVotes + ' '
+      return '<div class="hoverinfo">' + geography.properties.name
     },
     highlightBorderWidth: 3
   },
