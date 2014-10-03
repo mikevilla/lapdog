@@ -239,12 +239,28 @@ var lapDogMap = new Datamap({
           if (state_data[index].state == state) {
             if (state_data[index].type == "") {
               list_senators.push(value);
+
+              if (list_senators.length == 1) {
+                list_senators[0].senior = "1";
+              } else {
+                if (list_senators[0].years >= list_senators[1].years) {
+                  list_senators[0].senior = "1";
+                  list_senators[1].senior = "0";
+                } else {
+                  list_senators[0].senior = "0";
+                  list_senators[1].senior = "1";
+                }
+              }
+
+
             } else {
               list_reps.push(value);
             }
           }
 
         });
+
+        console.log("list of senators in usa map final", list_senators);
 
         // display the the senator and house of reps data
         $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {display_senators: list_senators, state: state}));

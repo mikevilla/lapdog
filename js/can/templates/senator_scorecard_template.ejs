@@ -26,7 +26,7 @@
                       </div>
                   </div>
                   <div class="senator-name"><%= display_senators[i].first %> <%= display_senators[i].last %></div>
-                  <div class="senator-position">Senator, <span class="senator-state"><%= state %></span></div>
+                  <div class="senator-position"><% if (display_senators[i].senior == 1) {%>Senior Senator<%} else {%>Senator<%}%>, <span class="senator-state"><%= state %></span></div>
               </div>
                <div class="rating-values">
                   <div class="thumbs-container">
