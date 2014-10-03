@@ -260,7 +260,8 @@ var lapDogMap = new Datamap({
 
         });
 
-        console.log("list of senators in usa map final", list_senators);
+        // sort the reps by contribution
+        list_reps.sort(function(a,b) {return (a.total_contributions < b.total_contributions) ? 1 : ((b.total_contributions < a.total_contributions) ? -1 : 0);} );
 
         // display the the senator and house of reps data
         $('#senator_container_layout').html(can.view('js/can/templates/senator_scorecard_template', {display_senators: list_senators, state: state}));
