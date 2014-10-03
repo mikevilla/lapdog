@@ -33,9 +33,45 @@
                     <img class="thumbs-image" alt="thumbs" src="<% if (i % 2 == 0) {%>images/thumbs_down.png<%}else{%>images/thumbs_up.png<%}%>" />
                   </div>
 
-                  <div class="dollar-container">
-                      <div class="dollar-amount"><span class="fill">$$$</span><span class="empty">$$</span></div>
-                  </div>
+                    <div class="dollar-container">
+                        <%
+                        var totalDollars = display_senators[i].total_contributions,
+                            dollarAmount = "",
+                            emptyAmount = "";
+
+                        switch(true) {
+                            case (totalDollars <= 0):
+                                dollarAmount = "";
+                                emptyAmount = "$$$$$";
+                                break;
+                            case (totalDollars <= 10000):
+                                dollarAmount = "$";
+                                emptyAmount = "$$$$";
+                                break;
+                            case (totalDollars <= 20000):
+                                dollarAmount = "$$";
+                                emptyAmount = "$$$";
+                                break;
+                            case (totalDollars <= 45000):
+                                dollarAmount = "$$$";
+                                emptyAmount = "$$";
+                                break;
+                            case (totalDollars <= 65000):
+                                dollarAmount = "$$$$";
+                                emptyAmount = "$";
+                                break;
+                            case (totalDollars > 65000):
+                                dollarAmount = "$$$$$";
+                                emptyAmount = "";
+                                break;
+                            default:
+                                dollarAmount = "";
+                                emptyAmount = "$$$$$";
+                        } %>
+                        <div class="dollar-amount">
+                          <span class="fill"><%= dollarAmount %></span><span class="empty"><%= emptyAmount %></span>
+                        </div>
+                    </div>
                </div>
                <div class="rating-labels">
                  <div class="brady-rating">

@@ -57,6 +57,10 @@
                               emptyAmount = "";
 
                           switch(true) {
+                              case (totalDollars <= 0):
+                                  dollarAmount = "";
+                                  emptyAmount = "$$$$$";
+                                  break;
                               case (totalDollars <= 10000):
                                   dollarAmount = "$";
                                   emptyAmount = "$$$$";
