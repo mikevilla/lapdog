@@ -1084,6 +1084,12 @@ img.house-paperclip-image {
     top: -3px;
 }
 
+.lapdog-image-container {
+    position: relative;
+    top: -118px;
+    left: 180px;
+}
+
 /* Layout Customization */
 
 #house-rep-grid .features-overview .feature {
