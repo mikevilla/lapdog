@@ -23,7 +23,21 @@
                           </div>
                       </div>
                       <div class="rep-name"><%= display_reps[i].first %> <%= display_reps[i].last %></div>
-                      <div class="rep-position">Representative, <span class="rep-state"><%= display_reps[i].state %></span></div>
+                      <div class="rep-position"><%
+                        switch(display_reps[i].party) {
+                            case "R":
+                                party = "Republican";
+                                break;
+                            case "D":
+                                party = "Democrat";
+                                break;
+                            case "I":
+                                party = "Independent";
+                                break;
+                            default:
+                                party = "";
+                        }
+                        %><%= party %>, <span class="rep-state"><%= display_reps[i].state %></span></div>
                   </div>
                    <div class="rating-values">
                       <div class="thumbs-container">
