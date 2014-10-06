@@ -1090,6 +1090,22 @@ img.house-paperclip-image {
     left: 180px;
 }
 
+/* =========== Worst Offenders Section ================*/
+
+.offenders {
+    clear: both;
+}
+
+.worst {
+    height: 82px;
+    float: left;
+    margin-right: 13px;
+}
+
+.worst-block .col-md-3 {
+    margin-bottom: 30px;
+}
+
 /* Layout Customization */
 
 #house-rep-grid .features-overview .feature {
