@@ -24,6 +24,9 @@
                       <div class="senator-image-container">
                         <img class="senator-image" alt="senator" src="http://theunitedstates.io/images/congress/225x275/<%= display_senators[i].bioguide %>.jpg" />
                       </div>
+                      <div class="lapdog-large-image-container" style="<% if ((display_senators[i].voting_score == 0) && (display_senators[i].total_contributions > 0)) {%>display: block;<%} else {%>display: none;<%}%>">
+                          <img class="lapdog-large-image" alt="senator" src="images/dog_badge_large.png" />
+                      </div>
                   </div>
                   <div class="senator-name"><%= display_senators[i].first %> <%= display_senators[i].last %></div>
                   <div class="senator-position"><% if (display_senators[i].senior == 1) {%>Senior Senator<%} else {%>Senator<%}%>, <span class="senator-state"><%= state %></span></div>

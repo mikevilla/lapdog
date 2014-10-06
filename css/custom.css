@@ -958,6 +958,11 @@ path:hover {
     margin-top: 35px;
 }
 
+.lapdog-large-image-container {
+    position: relative;
+    top: -195px;
+}
+
 
 /* =========== House of Rep ================*/
 .rep-score-card {
