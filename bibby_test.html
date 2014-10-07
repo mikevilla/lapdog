@@ -858,15 +858,19 @@
                     <div class="row">
                       <div class="col-md-2 col-sm-2"></div>
                       <div class="col-md-8 col-sm-8" style="margin-top: 20px;">
-                          <form class="contact-form" id="contact-form" role="form" action="TEST http://actions.bradycampaign.org/page/s/finish-the-job-petition">
+                          <form class="contact-form" id="signup" name="signup" role="form" action="">
 
                               <div class="sign-petition-form-group">
-                                  <input size="48" id="email" name="email" type="email" class="form-control text" placeholder="Email">
-                                  <input size="16" id="firstname" name="firstname" class="form-control" type="text" placeholder="First Name">
-                                  <input size="25" id="lastname" name="lastname" class="form-control" type="text" placeholder="Last Name">
-                                  <input size="8" id="zip" name="zip" type="text" class="form-control" value="" placeholder="Zip Code">
+                                  <input size="48" id="email" name="email" type="email" class="form-control text" placeholder="Email" required>
+                                  <div class="error-msg email-error">A valid email address is required.</div>
+                                  <input size="16" id="firstname" name="firstname" class="form-control" type="text" placeholder="First Name" required>
+                                  <div class="error-msg firstname-error">First Name is Required</div>
+                                  <input size="25" id="lastname" name="lastname" class="form-control" type="text" placeholder="Last Name" required>
+                                  <div class="error-msg lastname-error">Last Name is Required</div>
+                                  <input size="8" id="zip" name="zip" type="text" class="form-control" value="" placeholder="Zip Code" required>
+                                  <div class="error-msg zip-error">Zip Code is Required</div>
                                   <div class="sign-petition-submit">
-                                      <input class="btn btn-primary" type="submit" id="Sign The Petition" name="Sign The Petition" data-style="expand-left">
+                                      <input class="btn btn-primary" type="submit" id="sign-petition" name="Sign The Petition" data-style="expand-left">
                                   </div>
                               </div>
                           </form>
@@ -941,54 +945,8 @@
 
   <footer id="contact" class="section-padding">
     <div class="container">
-      <div class="section-header">
-          <div class="petition-image">
-              <img alt="Finish the Job" src="images/finish_the_job.png"/>
-          </div>
-          <h2 class="title sign-the-petition">Sign the Petition</h2>
-          <p class="subtitle">
-              Since the Brady law was passed 20 years ago, background checks have stopped more than 2 million gun purchases by people like felons, domestic abusers and fugitives. But 40% of gun sales still go unchecked, leaving the door open for dangerous people to buy guns.
-          </p>
-      </div>
 
-      <div class="row">
-        <div class="col-md-6 col-sm-6">
-            <form class="contact-form" id="contact-form" role="form" action="mailer.php">
-              <input class="form-control" id="name" type="text" name="name" placeholder="Your Name">
-              <input class="form-control" id="email" type="email" name="email" placeholder="Your Email">
 
-              <textarea class="form-control" id="message" rows="8" placeholder="Message"></textarea>
-                
-              <input class="btn btn-primary" type="submit" id="submit" name="submit" data-style="expand-left">
-            </form>
-        </div>
-
-        <div class="col-md-6 col-sm-6">
-          <div class="address">
-            <div class="details location">
-              <i aria-hidden="true" class="icon_pin_alt"></i>
-              <p>
-                840 First Street, NE, (Suite 400) <BR />
-				Washington, DC 20002
-              </p>
-            </div>
-
-            <div class="details phone-number">
-              <i aria-hidden="true" class="icon_mobile"></i>
-              <p>
-                (202) 370-8100
-              </p>
-            </div>
-
-            <div class="social">
-              <a href="#"><i aria-hidden="true" class="social_facebook_circle"></i></a>
-              <a href="#"><i aria-hidden="true" class="social_twitter_circle"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
       <div class="row">
         <div class="col-md-12">
           <div class="copyright">

@@ -1177,3 +1177,12 @@ img.house-paperclip-image {
     float: right;
     margin-top: -20px;
 }
+
+.error-msg {
+    margin-top: -13px;
+    margin-bottom: 12px;
+    margin-left: 3px;
+    color: rgb(245, 140, 140);
+    font-size: 11px;
+    visibility: hidden;
+}
