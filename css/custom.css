@@ -1165,3 +1165,15 @@ img.house-paperclip-image {
 .finish-the-job-image {
     margin: 0 auto;
 }
+
+
+/* =============== sign the peition ================= */
+
+.sign-petition-form-group {
+    float: left;
+}
+
+.sign-petition-submit {
+    float: right;
+    margin-top: -20px;
+}
