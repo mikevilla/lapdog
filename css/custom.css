@@ -961,6 +961,13 @@ path:hover {
     top: -195px;
 }
 
+img.lapdog-large-image {
+    height: 123px;
+}
+
+img.lapdog-image {
+    height: 49px;
+}
 
 /* =========== House of Rep ================*/
 .rep-score-card {
