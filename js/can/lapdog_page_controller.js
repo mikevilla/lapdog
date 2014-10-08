@@ -102,7 +102,15 @@ var lapdogPageControl  = can.Control(
         firstname = $form.find("#firstname").val(),
         lastname = $form.find("#lastname").val(),
         zip = $form.find("#zip").val(),
-        isEmailValid = false;
+        isEmailValid = false,
+        formParamsValid = false,
+        formData = {
+          email: "",
+          firstname: "",
+          lastname: "",
+          zip: ""
+        };
+
 
 
         console.log("email", email);
@@ -110,19 +118,34 @@ var lapdogPageControl  = can.Control(
         console.log("lastname", lastname);
         console.log("zip", zip);
 
-        if ( !outer.isValidEmailAddress( email ) ) {
-         /* do stuff here */
-          isEmailValid = false;
+        // check the required fields of the form
+        formParamsValid = outer.checkform($form);
+        console.log("formParamsValid:", formParamsValid);
 
-          // display the error message
-          $(".email-error").css('visibility', 'visible');
-          console.log("email is invalid")
+        if (formParamsValid) {
+          console.log("Proceed to submit");
+          formData.email = email;
+          formData.firstname = firstname;
+          formData.lastname = lastname;
+          formData.zip = zip;
+
+          console.log(formData);
+
+          outer.signPetition (formData, function() {
+            console.log("success FROM POST");
+            $("#completed-petition").fadeIn();
+
+          }, function() {
+            console.log("error IN POST");
+            $("#error-petition").fadeIn();
+
+          });
+
+
+
         } else {
-          isEmailValid = true;
-          console.log("VALID EMAIL")
+          console.log("Errors in email form");
         }
-
-        outer.checkform($form);
 
       });
 
@@ -130,7 +153,7 @@ var lapdogPageControl  = can.Control(
     }
   },
 
-  createNestedObject: function( base, names ) {
+  createNestedObject : function( base, names ) {
     for (var i = 0; i < names.length; i++) {
       base = base[ names[i] ] = base[ names[i] ] || {};
     }
@@ -143,6 +166,11 @@ var lapdogPageControl  = can.Control(
   },
 
   checkform :function (form) {
+
+      var outer = this,
+          email = form.find("#email").val(),
+          formParamsValid = true;
+
       // clear the error messages
       $(".error-msg").css('visibility', 'hidden');
 
@@ -154,11 +182,40 @@ var lapdogPageControl  = can.Control(
               if(inputs[i].value == ""){
                   // found an empty field that is required
                   $(inputs[i]).next().css('visibility', 'visible');
+                  formParamsValid = false;
               }
           }
       }
-      return true;
-  }
 
+
+      if ( !outer.isValidEmailAddress( email ) ) {
+
+         isEmailValid = false;
+         formParamsValid = false;
+
+         // display the error message
+         $(".email-error").css('visibility', 'visible');
+         console.log("email is invalid")
+      } else {
+         isEmailValid = true;
+         console.log("VALID EMAIL")
+      }
+
+
+
+      // return the value on whether or not the form had valid params
+      return formParamsValid;
+  },
+
+  signPetition : function  (formData, success_func, error_func) {
+
+    $.ajax({
+        url:"http://actions.bradycampaign.org/page/s/finish-the-job-petition",
+        data: formData,
+        type:"POST",
+        success:success_func,
+        error:error_func
+    });
+  }
 
 });
