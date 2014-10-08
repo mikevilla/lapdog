@@ -12,13 +12,13 @@ var lapDogMap = new Datamap({
   },
 
   fills: {
-  'Republican': '#CC4731',
-  'Democrat': '#306596',
-  'Heavy Democrat': '#667FAF',
-  'Light Democrat': '#A9C0DE',
-  'Heavy Republican': '#CA5E5B',
-  'Light Republican': '#EAA9A8',
-  defaultFill: '#EDDC4E'
+  'Republican': '#367EC1',
+  'Democrat': '#367EC1',
+  'Heavy Democrat': '#367EC1',
+  'Light Democrat': '#367EC1',
+  'Heavy Republican': '#367EC1',
+  'Light Republican': '#367EC1',
+  defaultFill: '#367EC1'
 },
   data:{
     "AZ": {
