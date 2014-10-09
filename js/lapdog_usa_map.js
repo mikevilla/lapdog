@@ -4,7 +4,6 @@ var lapDogMap = new Datamap({
   geographyConfig: {
     highlightBorderColor: '#bada55',
    popupTemplate: function(geography, data) {
-      //alert(data.electoralVotes);
       $("#state-name-value").html(data.state);
       return '<div class="hoverinfo">' + geography.properties.name
     },
@@ -225,7 +224,6 @@ var lapDogMap = new Datamap({
 
   done: function(datamap) {
       datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-
 
         // setup variables for state records and state names
         var state_data = $.state_data.states[geography.properties.name],

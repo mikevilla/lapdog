@@ -9,17 +9,18 @@ var lapdogPageControl  = can.Control(
   init:function () {
     this.load(test_data);
     var self = this,
-      state = self.getUrlParameter("state");
+        state = self.getUrlParameter("state");
 
-    // get the state from the url and of one is not present then setup a default
+    // get the state from the url and if one is not present then setup a default
     if (state) {
       state = state.replace(/%20/g, " ");
       console.log("init state", state);
       $.lapdog.initial_state = state;
     } else {
+
+      // setup the initial state to just be the default one
       $.lapdog.initial_state = lapdogPageControl.defaults.defaultState;
     }
-
   },
 
   load:function (test_data) {
@@ -30,10 +31,10 @@ var lapdogPageControl  = can.Control(
 
       var outer = this;
 
-
       // make the json call here and dont show the map until completely processed
       $.lapdog.state_data(function (data) {
 
+        // setup the objects that will build the state data structure
         $.lapdog_data = data;
         $.state_data = {
           states: {},
@@ -63,7 +64,6 @@ var lapdogPageControl  = can.Control(
             list_reps = [];
 
         // if a state was given in the url make sure that it is valid otherwise revert to default
-
         if (typeof $.state_data.states[$.lapdog.initial_state] != 'undefined') {
           state_data = $.state_data.states[$.lapdog.initial_state];
           state = $.lapdog.initial_state;
@@ -127,25 +127,14 @@ var lapdogPageControl  = can.Control(
           zip: ""
         };
 
-
-
-        console.log("email", email);
-        console.log("firstname", firstname);
-        console.log("lastname", lastname);
-        console.log("zip", zip);
-
         // check the required fields of the form
         formParamsValid = outer.checkform($form);
-        console.log("formParamsValid:", formParamsValid);
 
         if (formParamsValid) {
-          console.log("Proceed to submit");
           formData.email = email;
           formData.firstname = firstname;
           formData.lastname = lastname;
           formData.zip = zip;
-
-          console.log(formData);
 
           outer.signPetition (formData, function() {
             console.log("success FROM POST");
@@ -156,8 +145,6 @@ var lapdogPageControl  = can.Control(
             $("#error-petition").fadeIn();
 
           });
-
-
 
         } else {
           console.log("Errors in email form");
@@ -190,7 +177,6 @@ var lapdogPageControl  = can.Control(
       // clear the error messages
       $(".error-msg").css('visibility', 'hidden');
 
-
       var inputs = $('input');
       for (var i = 0; i < inputs.length; i++) {
           // only validate the inputs that have the required attribute
@@ -211,13 +197,11 @@ var lapdogPageControl  = can.Control(
 
          // display the error message
          $(".email-error").css('visibility', 'visible');
-         console.log("email is invalid")
+         console.log("INVALID Email")
       } else {
          isEmailValid = true;
-         console.log("VALID EMAIL")
+         console.log("VALID Email")
       }
-
-
 
       // return the value on whether or not the form had valid params
       return formParamsValid;
