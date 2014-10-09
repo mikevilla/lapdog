@@ -1,15 +1,24 @@
 var lapdogPageControl  = can.Control(
 {
   defaults:{
-
+    defaultState: "Georgia"
   }
 },
 // @Prototype
 {
   init:function () {
     this.load(test_data);
-    var self = this;
-    $.lapdog.initial_state = "California";
+    var self = this,
+      state = self.getUrlParameter("state");
+
+    // get the state from the url and of one is not present then setup a default
+    if (state) {
+      state = state.replace(/%20/g, " ");
+      console.log("init state", state);
+      $.lapdog.initial_state = state;
+    } else {
+      $.lapdog.initial_state = lapdogPageControl.defaults.defaultState;
+    }
 
   },
 
@@ -48,10 +57,17 @@ var lapdogPageControl  = can.Control(
 
 
         // setup variables for state records and state names
-        var state_data = $.state_data.states[$.lapdog.initial_state],
-            state = "California",
+        var state_data = $.state_data.states[lapdogPageControl.defaults.defaultState],
+            state = lapdogPageControl.defaults.defaultState,
             list_senators = [],
             list_reps = [];
+
+        // if a state was given in the url make sure that it is valid otherwise revert to default
+
+        if (typeof $.state_data.states[$.lapdog.initial_state] != 'undefined') {
+          state_data = $.state_data.states[$.lapdog.initial_state];
+          state = $.lapdog.initial_state;
+        }
 
         $.each(state_data, function( index, value ) {
 
@@ -216,6 +232,20 @@ var lapdogPageControl  = can.Control(
         success:success_func,
         error:error_func
     });
+  },
+
+  getUrlParameter : function (sParam)
+  {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
   }
 
 });
