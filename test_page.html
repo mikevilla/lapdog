@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
 
@@ -11,6 +11,16 @@
   <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
+
+  <!-- Facebook -->
+  <meta property="og:title" content="Finish the Job Scorecard: Lap Dog Edition">
+  <meta property="og:site_name" content="Finish the Job Scorecard: Lap Dog Edition">
+  <meta property="og:description" content="A new service brought to you by the Brady Campaign. How do members of the 113th Congress stack up when it comes to supporting legislation to expand background checks to online and gun show sales to keep America safer.">
+  <meta property="og:image" content="http://lapdogscorecard.org/images/logo-box-big.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="170">
+  <meta property="og:image:height" content="170">
+
 
   <!-- Libraries -->
   <link rel="stylesheet" href="css/lib/bootstrap.min.css">
@@ -35,6 +45,17 @@
   <![endif]-->
 </head>
 <body class="landing-page">
+
+<!-- Facebook Share -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1234567891234567";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="lapdog_master_layout" class="lapdog_master_content_layout">
 
