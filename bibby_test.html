@@ -49,13 +49,23 @@
 <!-- Facebook Share -->
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1234567891234567";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '383380718482682',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div id="lapdog_master_layout" class="lapdog_master_content_layout">
 
@@ -382,7 +392,9 @@
         </div>
     </div>
 
-
+        <div class="col-md-6">
+            <div class="fb-like" data-href="http://lapdogscorecard.org/bibby_test.html" data-width="100" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
 
         <div id="senator_container_layout">
             <div class="row">
