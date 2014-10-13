@@ -1206,23 +1206,45 @@ img.house-paperclip-image {
         .non-mobile.subtitle {
             display: none;
         }
+
+        .non-mobile map {
+            display: none;
+        }
+
+        .mobile.subtitle {
+            display: block;
+        }
+
+        .mobile.state-dropdown {
+            display: block;
+        }
 	}
 
 	/* Extra Small Devices, Phones */
 	@media only screen and (min-width : 480px) {
 
+
 	}
 
     @media only screen and (max-width : 480px) {
 
-        .mobile.subtitle {
-            display: block;
-        }
     }
 
 	/* Small Devices, Tablets */
+
+    @media only screen and (max-width : 768px) {
+        .non-mobile.map {
+            display: none;
+        }
+    }
+
+
 	@media only screen and (min-width : 768px) {
         .non-mobile.subtitle {
+            display: block;
+        }
+
+        .non-mobile.map {
             display: block;
         }
 
@@ -1230,6 +1252,9 @@ img.house-paperclip-image {
             display: none;
         }
 
+        .mobile.state-dropdown {
+            display: none;
+        }
 	}
 
 	/* Medium Devices, Desktops */
