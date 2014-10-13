@@ -1197,3 +1197,47 @@ img.house-paperclip-image {
 .facebook-container {
     margin-top: 10px;
 }
+
+/* =============== Media Queries Responsiveness ================= */
+
+
+	/* Custom, iPhone Retina */
+	@media only screen and (min-width : 320px) {
+        .non-mobile.subtitle {
+            display: none;
+        }
+	}
+
+	/* Extra Small Devices, Phones */
+	@media only screen and (min-width : 480px) {
+
+	}
+
+    @media only screen and (max-width : 480px) {
+
+        .mobile.subtitle {
+            display: block;
+        }
+    }
+
+	/* Small Devices, Tablets */
+	@media only screen and (min-width : 768px) {
+        .non-mobile.subtitle {
+            display: block;
+        }
+
+        .mobile.subtitle {
+            display: none;
+        }
+
+	}
+
+	/* Medium Devices, Desktops */
+	@media only screen and (min-width : 992px) {
+
+	}
+
+	/* Large Devices, Wide Screens */
+	@media only screen and (min-width : 1200px) {
+
+	}
