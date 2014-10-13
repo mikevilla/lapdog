@@ -393,7 +393,9 @@
                 <div id="lap-dog-map" class="usa-state-map"></div>
 			</div>
             <div class="mobile state-dropdown">
-                SELECT BOX HERE
+                <select id="state-selection-dropdown" class="">
+                  <option value="" selected="selected">State</option>
+                </select>
             </div>
         </div>
     </div>
@@ -1110,10 +1112,7 @@
   <script src="js/can/models/lapdog.js"></script>
 
   <script type="text/javascript" charset="utf-8">
-    var test_data = {senator: 'grace' };
-
-    console.log('senator: ', test_data.senator);
-    var lapdogPage = new lapdogPageControl('#lapdog_master_layout', {test_data:test_data});
+    var lapdogPage = new lapdogPageControl('#lapdog_master_layout', {});
   </script>
 
   <script>

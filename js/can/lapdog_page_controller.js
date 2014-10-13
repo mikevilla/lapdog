@@ -7,7 +7,7 @@ var lapdogPageControl  = can.Control(
 // @Prototype
 {
   init:function () {
-    this.load(test_data);
+    this.load();
     var self = this,
         state = self.getUrlParameter("state");
 
@@ -23,7 +23,7 @@ var lapdogPageControl  = can.Control(
     }
   },
 
-  load:function (test_data) {
+  load:function () {
     if (!this.hasOwnProperty('set_up_complete')) {
       this.set_up_complete = false;
     }
@@ -61,13 +61,19 @@ var lapdogPageControl  = can.Control(
         var state_data = $.state_data.states[lapdogPageControl.defaults.defaultState],
             state = lapdogPageControl.defaults.defaultState,
             list_senators = [],
-            list_reps = [];
+            list_reps = [],
+            options = $("#state-selection-dropdown");
 
         // if a state was given in the url make sure that it is valid otherwise revert to default
         if (typeof $.state_data.states[$.lapdog.initial_state] != 'undefined') {
           state_data = $.state_data.states[$.lapdog.initial_state];
           state = $.lapdog.initial_state;
         }
+
+        // build up the state-selection box with the list of states
+        $.each($.state_data.states, function(index, value) {
+          options.append($("<option />").val(index).text(index));
+        });
 
         $.each(state_data, function( index, value ) {
 
