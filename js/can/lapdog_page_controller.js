@@ -158,6 +158,13 @@ var lapdogPageControl  = can.Control(
 
       });
 
+      $('#state-selection-dropdown').change(function () {
+          var selection = this.value; // get the selected value
+          console.log('selected', selection);
+
+
+      });
+
       this.set_up_complete = true;
     }
   },
@@ -237,5 +244,7 @@ var lapdogPageControl  = can.Control(
         }
     }
   }
+
+
 
 });
