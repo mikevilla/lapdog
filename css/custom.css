@@ -1122,8 +1122,9 @@ img.house-paperclip-image {
     margin-bottom: 30px;
 }
 
-
-
+#house-rep-grid {
+    margin-top: -47px;
+}
 
 @media (min-width: 992px) {
     #house_container_layout {
@@ -1195,7 +1196,15 @@ img.house-paperclip-image {
 }
 
 .facebook-container {
-    margin-top: 10px;
+
+}
+
+.twitter-container {
+
+}
+
+.social-sharing-container {
+    margin-top: 30px;
 }
 
 /* =============== Media Queries Responsiveness ================= */
