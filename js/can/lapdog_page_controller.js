@@ -25,7 +25,7 @@ var lapdogPageControl  = can.Control(
     // calls function when the window is clicked
     this.on( window, 'resize', function( ev ) {
       //var lapDogMap = new Datamap($.dataMapData);
-      $.lapdog.renderMap($.lapdog.initial_state)
+      //$.lapdog.renderMap($.lapdog.initial_state)
     });
 
   },
