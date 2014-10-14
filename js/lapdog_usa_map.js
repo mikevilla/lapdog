@@ -1,4 +1,4 @@
-var lapDogMap = new Datamap({
+$.dataMapData = {
   scope: 'usa',
   element: document.getElementById('lap-dog-map'),
   geographyConfig: {
@@ -233,5 +233,8 @@ var lapDogMap = new Datamap({
     });
   }
 
-});
+};
+
+var lapDogMap = new Datamap($.dataMapData);
+
 lapDogMap.labels();

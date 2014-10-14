@@ -21,6 +21,13 @@ var lapdogPageControl  = can.Control(
       // setup the initial state to just be the default one
       $.lapdog.initial_state = lapdogPageControl.defaults.defaultState;
     }
+
+    // calls function when the window is clicked
+    this.on( window, 'resize', function( ev ) {
+      //var lapDogMap = new Datamap($.dataMapData);
+      $.lapdog.renderMap($.lapdog.initial_state)
+    });
+
   },
 
   load:function () {
@@ -160,9 +167,8 @@ var lapdogPageControl  = can.Control(
 
       $('#state-selection-dropdown').change(function () {
           var selection = this.value; // get the selected value
-          console.log('selected', selection);
 
-
+          $.lapdog.renderMap(selection);
       });
 
       this.set_up_complete = true;
@@ -244,7 +250,5 @@ var lapdogPageControl  = can.Control(
         }
     }
   }
-
-
 
 });

@@ -15,7 +15,7 @@
   <!-- Facebook -->
   <meta property="og:title" content="Finish the Job Scorecard: Lap Dog Edition">
   <meta property="og:site_name" content="Finish the Job Scorecard: Lap Dog Edition">
-  <meta property="og:description" content="A new service brought to you by the Brady Campaign. How do members of the 113th Congress stack up when it comes to supporting legislation to expand background checks to online and gun show sales to keep America safer.">
+  <meta property="og:description" content="#NRALapDogs A new service brought to you by the Brady Campaign. How do members of the 113th Congress stack up when it comes to supporting legislation to expand background checks to online and gun show sales to keep America safer.">
   <meta property="og:image" content="http://lapdogscorecard.org/images/logo-box-big.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="170">
@@ -382,13 +382,21 @@
         <div class="col-md-12">
 	        <div class="section-header" style="margin-top: 5em; margin-bottom: -1em;">
 	          <h2 class="title"></h2>
-	          <p class="subtitle">
-	            Click on your state below to see if <br />your member of Congress is a lap dog for the corporate gun lobby.
+	          <p class="non-mobile subtitle">
+	            Click on your state below to see if your member of Congress is a lap dog for the corporate gun lobby.
 	          </p>
+              <p class="mobile subtitle">
+                Select your state to see if your member of Congress is a lap dog for the corporate gun lobby.
+              </p>
 	        </div>
-			<div align="center">
+			<div align="center" class="non-mobile map">
                 <div id="lap-dog-map" class="usa-state-map"></div>
 			</div>
+            <div class="mobile state-dropdown">
+                <select id="state-selection-dropdown" class="">
+                  <option value="" selected="selected">State</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -403,6 +411,17 @@
             <div class="col-md-5 col-sm-5 col-xs-2">&nbsp;</div>
 
         </div>
+
+      <div class="row twitter-container">
+        <div class="col-md-5 col-sm-5 col-xs-2">&nbsp;</div>
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="social" style="font-size: 5em;">
+             <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lapdogscorecard.org" data-text="Corporate gun lobby scorecards." data-size="large" data-hashtags="NRALapDogs">Tweet</a>
+             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+           </div>
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-2">&nbsp;</div>
+      </div>
 
         <div id="senator_container_layout">
             <div class="row">
@@ -1104,10 +1123,7 @@
   <script src="js/can/models/lapdog.js"></script>
 
   <script type="text/javascript" charset="utf-8">
-    var test_data = {senator: 'grace' };
-
-    console.log('senator: ', test_data.senator);
-    var lapdogPage = new lapdogPageControl('#lapdog_master_layout', {test_data:test_data});
+    var lapdogPage = new lapdogPageControl('#lapdog_master_layout', {});
   </script>
 
   <script>
