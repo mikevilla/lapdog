@@ -33,7 +33,7 @@
 body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 1.3em;
   letter-spacing: .75px;
   color: #999999;
   overflow-y: hidden;
@@ -61,7 +61,7 @@ h3 {
   color: #113870;
 }
 h4 {
-  font-size: 16px;
+  font-size: 1.5em;
 }
 h5 {
   font-size: 14px;
@@ -290,7 +290,7 @@ footer {
   font-size: 28px;
 }
 .subtitle {
-  font-size: 18px;
+  font-size: 1.875em;
 }
 .color-overlay {
   background: rgba(0, 0, 0, 0.5);
@@ -425,7 +425,7 @@ footer {
   font-size: 32px;
 }
 .features-media .title {
-  font-size: 18px;
+  font-size: 2.25em;
 }
 /* ----------------------------------------
 	 Testimonials
@@ -1104,6 +1104,7 @@ img.house-paperclip-image {
 
 .offenders {
     clear: both;
+    font-size: 1.2em;
 }
 
 .worst {
@@ -1174,6 +1175,11 @@ img.house-paperclip-image {
     margin: 0 auto;
 }
 
+/* =============== 3 Steps ================= */
+
+.expose-steps {
+    font-size: 1.2em;
+}
 
 /* =============== sign the peition ================= */
 
