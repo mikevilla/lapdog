@@ -829,6 +829,10 @@ path:hover {
     cursor: pointer;
 }
 
+.brady-logo {
+    margin-left: 27px;
+}
+
 /* LAPDOG ScoreCard */
 
 .senator-score-card .senator-info {
