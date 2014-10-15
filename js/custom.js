@@ -36,7 +36,7 @@ $(document).ready(function() {
     if ( ! ( $('.navbar-collapse').hasClass('in') ) ) {
       // if mobile menu not opened and not on small screens
       var currentScollTop = $(this).scrollTop();
-      if (currentScollTop > lastScrollTop || win.scrollTop() < 800) {
+      if (currentScollTop > lastScrollTop || win.scrollTop() < 100) {
         // downscroll code
         nav.css('top', navHeight * -1);
       } else {
