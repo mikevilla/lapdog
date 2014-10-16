@@ -1,7 +1,7 @@
 var lapdogPageControl  = can.Control(
 {
   defaults:{
-    defaultState: "Georgia"
+    defaultState: "Texas"
   }
 },
 // @Prototype
