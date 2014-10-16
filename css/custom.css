@@ -1062,7 +1062,7 @@ img.lapdog-image {
     margin-left: 13px;
     font-style: italic;
     color: #367EC1;
-    font-size: 1.813em;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 400;
     text-align: left;
@@ -1072,7 +1072,7 @@ img.lapdog-image {
 .rep-score-card .rep-position {
     text-align: left;
     font-family: helvetica neue;
-    font-size: 1.35em;
+    font-size: 16px;
     color: #696969;
     margin-left: 13px;
 }
