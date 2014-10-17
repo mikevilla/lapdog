@@ -976,13 +976,13 @@ img.lapdog-image {
 /* =========== House of Rep ================*/
 .rep-score-card {
     width: 226px;
-    height: 185px;
+    height: 209px;
     background-color: #F6F6F6;
 }
 
 .rep-score-card .rep-info {
     width: 226px;
-    height: 115px;
+    height: 135px;
 }
 
 .rep-score-card .rep-state {

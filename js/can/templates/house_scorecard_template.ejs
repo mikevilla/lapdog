@@ -46,7 +46,26 @@
                             default:
                                 party = "";
                         }
-                        %><%= party %>, <span class="rep-state"><%= display_reps[i].state %></span></div>
+                        %><%= party %></div>
+                        <div class="rep-position" style="color:#3D3A3A">
+                          <%
+                          switch(display_reps[i].type) {
+                              case "1":
+                                  suffix = "st";
+                                  break;
+                              case "2":
+                                  suffix = "nd";
+                                  break;
+                              case "3":
+                                  suffix = "rd";
+                                  break;
+                              default:
+                                  suffix = "th";
+                          }
+
+                          %>
+                          <%= display_reps[i].state %>'s <%= display_reps[i].type %><%= suffix %> District
+                        </div>
                   </div>
                    <div class="rating-values">
                       <div class="thumbs-container">
