@@ -28,7 +28,21 @@
                       </div>
                   </div>
                   <div class="senator-name"><%= display_senators[i].first %> <%= display_senators[i].last %></div>
-                  <div class="senator-position"><% if (display_senators[i].senior == 1) {%>Senator<%} else {%>Senator<%}%>, <span class="senator-state"><%= state %></span></div>
+                  <div class="senator-position"><%
+                      switch(display_senators[i].party) {
+                          case "R":
+                              party = "Republican";
+                              break;
+                          case "D":
+                              party = "Democrat";
+                              break;
+                          case "I":
+                              party = "Independent";
+                              break;
+                          default:
+                              party = "";
+                      }
+                      %><%= party %> Senator, <span class="senator-state"><%= state %></span></div>
               </div>
                <div class="rating-values">
                   <div class="thumbs-container">
