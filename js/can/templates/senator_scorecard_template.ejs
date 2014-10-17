@@ -18,7 +18,7 @@
                           <img class="paperclip-image" alt="paperclip" src="images/paper_clip.png" />
                       </div>
                       <div class="senator-image-container">
-                        <img class="senator-image" alt="senator" src="<%if (display_senators[i].last == "Booker") {%>images/direct/cory_booker.jpg<%} else if (display_senators[i].last == "Walsh") {%>images/direct/john_walsh.jpg<%} else {%> http://theunitedstates.io/images/congress/225x275/<%= display_senators[i].bioguide %>.jpg <%}%>" />
+                        <img class="senator-image" alt="senator" src="<%if (display_senators[i].last == "Booker") {%>images/direct/cory_booker.jpg<%} else if (display_senators[i].last == "Walsh") {%>images/direct/john_walsh.jpg<%} else {%>images/bioguide/<%= display_senators[i].bioguide %>.jpg <%}%>" />
                       </div>
                       <div class="lapdog-large-image-container" style="<%if ((display_senators[i].last == "Begich") || (display_senators[i].last == "Pryor")) {%>display: block;<%} else {%>display: none;<%}%>">
                           <img class="lapdog-large-image" alt="senator" src="images/badges02.png" />
