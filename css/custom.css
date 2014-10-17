@@ -401,7 +401,7 @@ footer {
   padding: 40px 0;
 }
 .features-media .feature-media-text {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .features-media .feature-media-text .btn {
   margin-top: 40px;
@@ -1185,10 +1185,15 @@ img.house-paperclip-image {
     font-size: 1.2em;
 }
 
+#whatyoucando li {
+    color: #999;
+    font-size: 16px;
+}
+
 /* =============== sign the peition ================= */
 
 .sign-petition-form-group {
-    float: left;
+    width: 100%;
 }
 
 .sign-petition-submit {
