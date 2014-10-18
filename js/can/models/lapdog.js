@@ -52,7 +52,7 @@ $.lapdog = can.Model.extend({
       $('#house_container_layout').html(can.view('js/can/templates/house_scorecard_template',{display_reps: list_reps, state: state}));
 
       // put focus to the top of the senators
-      $(window).scrollTop($('#senator_container_layout').position().top - 20);
+      $(window).scrollTop($('#start-senators-card').position().top - 200);
 
   }
 
