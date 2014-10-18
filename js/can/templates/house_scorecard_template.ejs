@@ -50,13 +50,31 @@
                         <div class="rep-position" style="color:#3D3A3A; font-size: 15px;">
                           <%
                           switch(display_reps[i].type) {
-                              case "1":
+                              case "1" :
                                   suffix = "st";
                                   break;
-                              case "2":
+                              case "21" :
+                                  suffix = "st";
+                                  break;
+                              case "31" :
+                                  suffix = "st";
+                                  break;
+                              case "2" || "22" || "32" :
                                   suffix = "nd";
                                   break;
-                              case "3":
+                              case "22" :
+                                  suffix = "nd";
+                                  break;
+                              case "32" :
+                                  suffix = "nd";
+                                  break;
+                              case "3" :
+                                  suffix = "rd";
+                                  break;
+                              case "23" :
+                                  suffix = "rd";
+                                  break;
+                              case "33" :
                                   suffix = "rd";
                                   break;
                               default:
@@ -64,7 +82,7 @@
                           }
 
                           %>
-                          <%= display_reps[i].state %>'s <%= display_reps[i].type %><%= suffix %> District
+                          <%= display_reps[i].state %> <%= display_reps[i].type %><%= suffix %> District
                         </div>
                   </div>
                    <div class="rating-values">
