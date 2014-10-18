@@ -77,9 +77,18 @@ var lapdogPageControl  = can.Control(
           state = $.lapdog.initial_state;
         }
 
+        // sort state names
+        $.stateNames = [];
+
+        for ( property in $.state_data.states ) {
+          $.stateNames.push(property);
+        }
+
+        $.stateNames.sort(function(a,b) {return (a > b) ? 1 : ((b > a) ? -1 : 0)} );
+
         // build up the state-selection box with the list of states
-        $.each($.state_data.states, function(index, value) {
-          options.append($("<option />").val(index).text(index));
+        $.each($.stateNames, function(index, value) {
+          options.append($("<option />").val(value).text(value));
         });
 
         $.each(state_data, function( index, value ) {
