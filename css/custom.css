@@ -1185,7 +1185,7 @@ img.house-paperclip-image {
     font-size: 1.2em;
 }
 
-#whatyoucando li {
+#whatyoucando li, #whatyoucando p {
     color: #999;
     font-size: 16px;
 }
