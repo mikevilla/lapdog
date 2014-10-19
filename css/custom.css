@@ -1211,7 +1211,7 @@ img.house-paperclip-image {
 }
 
 .facebook-container {
-
+    margin-left: -23px;
 }
 
 .twitter-container {
@@ -1258,6 +1258,14 @@ img.house-paperclip-image {
 
     @media only screen and (max-width : 768px) {
         .non-mobile.map {
+            display: none;
+        }
+
+        .facebook-container {
+            margin-left: 0;
+        }
+
+        .preloader {
             display: none;
         }
     }
